@@ -2,6 +2,8 @@
 // Kyle Hughes
 // 9/9/14
 // hw02
+// Purpose: Compute the cost of items bought at Walmart,
+// including PA sales tax
 
 //define class
 public class Arithmetic{
