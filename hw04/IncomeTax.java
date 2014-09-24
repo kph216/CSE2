@@ -36,15 +36,14 @@ public class IncomeTax{
         tRate = 7.0;
       else if(number >=40 && number <78)
         tRate = 12.0  ;
-      else 
+      else {
         tRate = 14.0;
-      //equations
-      val=(number*1000);
-      tax = (double)((int)((tRate/100)*val));
-      //prints out outcome of code
-      System.out.println("The tax rate on $"+val+" is "+tRate+"%, and the tax is $"+tax);
     }
-    else // validate if number is an integer
+      tax = (double)((int)((tRate/100)*number));
+      //prints out outcome of code
+       System.out.println("The tax rate on $"+number+",000 is "+tRate+"%, and the tax is $"+tax);
+    }
+    else // validate if number is an intege
       System.out.println("You did not enter an int");
   }
 }
