@@ -8,16 +8,10 @@
 
 public class Roulette{ // define a class
   public static void main(String[] args) {    // define a main method
-    int exp=0; //variables
-    int spin=0;
-    int success=0;
-    int fail=0;
-    int win=0;
-    int lose=0;
-    int totsuccess=0;
+    int exp=0,lose=0,win=0,spin=0,success=0,totsuccess=0,fail=0; //variables
     while (exp<1000){ //nested loop outside
-      spin=0;
       success=0;
+      spin=0;
       fail=0;
       while(spin<100){    //nested loop inner
         double x=Math.random();
