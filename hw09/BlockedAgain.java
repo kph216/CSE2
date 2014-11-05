@@ -1,3 +1,10 @@
+/////////////////////////////////////////////////////////////////////////////////
+//Kyle Hughes
+//11/4/14
+//Hw09
+//Purpose: Using methods create the diagram. Since its a complicated problem it 
+//should be broken up into 2 problems, which also contain subproblems to solve this 
+
 import java.util.Scanner;//import scanner
 public class BlockedAgain{//define class
   public static int getInt(){//force user to input a integer method
