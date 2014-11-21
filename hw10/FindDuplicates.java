@@ -9,29 +9,29 @@ import java.util.Scanner;
 public class FindDuplicates{
   public static void main(String [] arg){
     Scanner scan=new Scanner(System.in);
-    int num[]=new int[10];
+    int num[]=new int[10]; //array with 10 ints, initializing array
     String answer="";
     do{
-      System.out.print("Enter 10 ints- ");
+      System.out.print("Enter 10 ints- "); //ask user for input
       for(int j=0;j<10;j++){
-        num[j]=scan.nextInt();
+        num[j]=scan.nextInt(); //saves imput
       }
       String out="The array ";
       out+=listArray(num); //return a string of the form "{2, 3, -9}"   
-      if(hasDups(num)){
+      if(hasDups(num)){ //if input has dups continue
         out+="has ";
       }
-      else{
+      else{ //if input doesnt have dups continues
         out+="does not have ";
       }
       out+="duplicates.";
       System.out.println(out);
       out="The array ";
       out+=listArray(num);    
-      if(exactlyOneDup(num)){
+      if(exactlyOneDup(num)){ //if input has one duplicate continue
         out+="has ";
       }
-      else{
+      else{ //if input doesnt have one duplicate continue
         out+="does not have ";
       }
       out+="exactly one duplicate.";
@@ -40,38 +40,38 @@ public class FindDuplicates{
       answer=scan.next();
     }while(answer.equals("Y") || answer.equals("y"));
   }
-  public static boolean hasDups(int[] input){
-    for(int i=0;i<input.length; i++){
+  public static boolean hasDups(int[] input){ //method for to find duplicates
+    for(int i=0;i<input.length; i++){ //
       for(int j=0;j<input.length;j++){
-        if((input[i]==(input[j]))&&(i!=j)){
+        if((input[i]==(input[j]))&&(i!=j)){ //if duplicates exist return true
           return true;
         }
       }
     }
-    return false;
+    return false; //if not return false
   }
   public static boolean exactlyOneDup(int[] input){
-    int count = 0;
+    int count = 0;//initialize count for pairs
     for(int i=0;i<input.length; i++){
       for(int j=0;j<input.length;j++){
         if((input[i]==(input[j]))&&(i!=j)){
-          count++;
+          count++; // increments count for every pair
         }
       }
     }
-    return (count == 2);
+    return (count == 2); //returns if only one pair 
   }
   
   public static String listArray(int[] num){
     String out="{";
     for(int j=0;j<num.length;j++){
       if(j>0){
-        out+=", ";
+        out+=", "; //if statement to print ints neatly
       }
       out+=num[j];
     }
     out+="} ";
-    return out;
+    return out; //returns to out adding on to what is going to be print
   }
 }
 
